@@ -1,0 +1,133 @@
+
+h1 {
+    color: white;
+    font-size: 30pt;
+    letter-spacing: 2pt;
+}
+
+h2 {
+    font-size: 25pt;
+    margin-top: 10px;
+    margin-bottom: 1px;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+.bar-1 {
+    background-color:  #33a8dd;
+}
+
+.bar-2 {
+    background-color: tomato;
+}
+
+.bar-3 {
+    background-color: mediumturquoise;
+}
+
+h2, p {
+    text-align: center;
+}
+
+article {
+    padding: 10pt 50pt;
+}
+/* center the colored bars and put top margin */
+div {
+    margin: 20pt auto 0 auto;
+    height: 20pt;
+    width: 120pt;
+}
+
+/* Why doesn't this work?? */
+span {
+    font-weight: bold;
+}
+
+
+
+
+/* for phone - had to change min width to a lot lower */
+@media (min-width: 320px) {
+   
+ body {
+    display: grid;
+    grid-template-rows: 25% auto auto auto;
+    grid-template-columns: 100%;
+    grid-template-areas:
+    "main"
+    "item-1"
+    "item-2"
+    "item-3"; 
+}
+
+    main {
+        grid-area: main;
+        background-color: #33a8dd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 {
+        margin-left: 30px;
+    }
+    
+    .item-1 {
+        grid-area: item-1;
+    }
+    .item-2 {
+        grid-area: item-2;
+    }
+    .item-3 {
+        grid-area: item-3;
+    }
+
+    section {
+        background-color: whitesmoke;
+    }
+
+}
+
+
+/* for desktop */
+@media (min-width: 992px) {
+   body {
+      height: 100%;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 100%;
+      grid-template-areas: 
+      "main"
+      "section";
+    }
+
+    main {
+        grid-area: main;
+        background-color: mediumturquoise;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    section {
+        grid-area: section;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: black;
+        padding: 10px 60px 40px 60px;
+    }
+
+    h2, p {
+        color: white;
+    }
+
+}
+
