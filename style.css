@@ -50,9 +50,6 @@ span {
     font-weight: bold;
 }
 
-
-
-
 /* for phone - had to change min width to a lot lower */
 @media (min-width: 320px) {
    
@@ -95,17 +92,16 @@ span {
 
 }
 
-
 /* for desktop */
 @media (min-width: 992px) {
    body {
       height: 100%;
       display: grid;
-      grid-template-rows: 1fr 1fr;
-      grid-template-columns: 100%;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       grid-template-areas: 
-      "main"
-      "section";
+      "main main main"
+      "item-1 item-2 item-3";
     }
 
     main {
@@ -116,11 +112,7 @@ span {
         align-items: center;
     }
     
-    section {
-        grid-area: section;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+    article {
         background-color: black;
         padding: 10px 60px 40px 60px;
     }
